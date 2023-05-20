@@ -1,4 +1,16 @@
-ELECT Teams.team_name
+/* 1. What are the names of the players whose salary is greater than 100,000? */
+SELECT player_name, salary 
+FROM Players
+WHERE salary > 100000;
+
+/* 2. What is the team name of the player with player_id = 3? */
+SELECT Teams.team_name
+FROM Players
+JOIN Teams ON Players.team_id = Teams.team_id
+WHERE Players.player_id = 3;
+
+/* 3. What is the total number of players in each team? */
+SELECT Teams.team_name
 FROM Players
 JOIN Teams ON Players.team_id = Teams.team_id
 WHERE Players.player_id = 3;
